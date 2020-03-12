@@ -1,0 +1,7 @@
+apiVersion: smartx.com/v1
+kind: Website
+metadata:
+  name: website-1   
+spec:
+  deploymentName: website-1-demployment-1
+  replicas: 2
