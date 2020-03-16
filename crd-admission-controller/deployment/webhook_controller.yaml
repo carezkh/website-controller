@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webhook-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webhook-controller
+  template:
+    metadata:
+      name: webhook-controller
+      labels:
+        app: webhook-controller
+    spec:
+      containers:
+      - name: webhook-controller
+        image: carezkh/webhook-controller:v0.1.0
+        ports: 
+        - containerPort: 443
